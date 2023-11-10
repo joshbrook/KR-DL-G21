@@ -21,6 +21,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BBQSauce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BBQSauce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Sauces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Bacon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Bacon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#HotToppings"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Beef -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Beef">
@@ -33,6 +49,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Burgers">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheddar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheddar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheese"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheese -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheese">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Toppings"/>
     </owl:Class>
     
 
@@ -51,10 +83,66 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GrilledOnion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GrilledOnion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#HotToppings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#HotToppings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#HotToppings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Toppings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Jalapeno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Jalapeno">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Salads"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Ketchup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Ketchup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Sauces"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Lettuce -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Lettuce">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Toppings"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Salads"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mayo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mayo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Sauces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mozzarella -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mozzarella">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheese"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mustard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mustard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Sauces"/>
     </owl:Class>
     
 
@@ -67,10 +155,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Pickles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Pickles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Salads"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Pineapple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Pineapple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#HotToppings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#RawOnion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#RawOnion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Salads"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Salads -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Salads">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Toppings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Sauces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Sauces">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Tomato -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Tomato">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Toppings"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Salads"/>
     </owl:Class>
     
 

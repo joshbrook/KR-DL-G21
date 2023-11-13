@@ -13,6 +13,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasTopping"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -37,6 +54,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BaconCheeseburger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BaconCheeseburger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Burgers"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Beef -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Beef">
@@ -49,6 +74,26 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Burgers">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Bacon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Bacon"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheddar"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GrilledOnion"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 

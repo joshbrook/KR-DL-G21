@@ -21,13 +21,31 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isContainedIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasBread -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasBread">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasIngredient"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isBreadOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
     </owl:ObjectProperty>
@@ -37,7 +55,7 @@
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasIngredient -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasIngredient">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isIngredientOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
@@ -61,7 +79,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasTopping">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasIngredient"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isToppingOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
     </owl:ObjectProperty>
@@ -78,10 +95,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isContainedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isContainedWithTracesIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isContainedWithTracesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isContainedWithTracesIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isIngredientOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isIngredientOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#isContainedIn"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
@@ -107,10 +140,39 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansAllergen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggAllergen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishAllergen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonAllergen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsAllergen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameAllergen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyAllergen"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutAllergen"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#ValueThing"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BBQSauce -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BBQSauce">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Sauce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasSpiciness"/>
@@ -208,6 +270,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BrownBun">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BurgerBread"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#VegetarianFood"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -216,18 +284,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Burger">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasBread"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BurgerBread"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasTopping"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BurgerTopping"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -252,6 +308,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheddar">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheese"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasSpiciness"/>
@@ -350,10 +412,98 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansAllergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansAllergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansUnsafeFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansUnsafeFood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansUnsafeFoodTraces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansUnsafeFoodTraces">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#DomainThing -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#DomainThing">
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#ValueThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggAllergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggAllergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggUnsafeFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggUnsafeFood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggUnsafeFoodTraces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggUnsafeFoodTraces">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -367,12 +517,27 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Burger"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasBread"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BrownBun"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BrownBun"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonFreeBun"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Burger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishAllergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishAllergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen"/>
     </owl:Class>
     
 
@@ -441,6 +606,54 @@
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishPatty">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Patty"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PegatarianFood"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishUnsafeFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishUnsafeFood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishUnsafeFoodTraces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishUnsafeFoodTraces">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -449,6 +662,91 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#DomainThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttenFreeBurger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttenFreeBurger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#NamedBurger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasBread"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonFreeBun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Veggie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasBread"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonFreeBun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasTopping"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Veggie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonAllergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonAllergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonFreeBun -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonFreeBun">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BurgerBread"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#VeganFood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonUnsafeFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonUnsafeFood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonUnsafeFoodTraces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonUnsafeFoodTraces">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -596,6 +894,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Sauce"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasSpiciness"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mild"/>
             </owl:Restriction>
@@ -702,10 +1012,60 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkUnsafeFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkUnsafeFood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkUnsafeFoodTraces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkUnsafeFoodTraces">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mozzarella -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mozzarella">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Cheese"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasSpiciness"/>
@@ -720,6 +1080,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mustard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Sauce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasSpiciness"/>
@@ -742,6 +1108,50 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Patty">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BurgerTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsAllergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsAllergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsUnsafeFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsUnsafeFood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsUnsafeFoodTraces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsUnsafeFoodTraces">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -842,6 +1252,94 @@
     
 
 
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameAllergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameAllergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameUnsafeFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameUnsafeFood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameUnsafeFoodTraces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameUnsafeFoodTraces">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyAllergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyAllergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyUnsafeFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyUnsafeFood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyUnsafeFoodTraces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyUnsafeFoodTraces">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Spiciness -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Spiciness">
@@ -916,6 +1414,50 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mild"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutAllergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutAllergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Allergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutUnsafeFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutUnsafeFood">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutUnsafeFoodTraces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutUnsafeFoodTraces">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutAllergen"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -1073,6 +1615,12 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#VeganFood"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasSpiciness"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mild"/>
             </owl:Restriction>
@@ -1204,6 +1752,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#WhiteBun">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#BurgerBread"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#VegetarianFood"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1216,6 +1770,20 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansAllergen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#EggAllergen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishAllergen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#GluttonAllergen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#MilkAllergen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PeanutsAllergen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SesameAllergen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#SoyAllergen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#TreeNutAllergen"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">

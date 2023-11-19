@@ -25,7 +25,6 @@ print("Converting to binary conjunctions")
 gateway.convertToBinaryConjunctions(ontology)
 
 
-
 # get the TBox axioms
 tbox = ontology.tbox()
 axioms = tbox.getAxioms()

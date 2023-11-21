@@ -605,7 +605,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#FishPatty">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Patty"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PegatarianFood"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PescatarianFood"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#contains"/>
@@ -616,6 +616,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#containsTracesOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#CrustaceansAllergen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasSpiciness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Mild"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1156,9 +1162,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PegatarianBurger -->
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PescatarianBurger -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PegatarianBurger">
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PescatarianBurger">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1167,11 +1173,11 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasBread"/>
-                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PegatarianFood"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PescatarianFood"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#hasTopping"/>
-                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PegatarianFood"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PescatarianFood"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1183,9 +1189,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PegatarianFood -->
+    <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PescatarianFood -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PegatarianFood">
+    <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PescatarianFood">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#Food"/>
     </owl:Class>
     
@@ -1603,7 +1609,7 @@
     <!-- http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#VegetarianFood -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#VegetarianFood">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PegatarianFood"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yoshm/ontologies/2023/10/untitled-ontology-8#PescatarianFood"/>
     </owl:Class>
     
 

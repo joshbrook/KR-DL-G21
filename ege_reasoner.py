@@ -47,20 +47,21 @@ def check_subsumption(subsumer, subsumee):
 
     # This will keep the dict of roles and successors for each individual
     successor_dict = {"d0" : {}}
+
     changed = True
     subsumer_found = False
     while changed:
         changed = False
         for d in list(current_interpretation.keys()):
-            changed |= apply_rules(d, current_interpretation, successor_dict, subsumer, subsumer_found)
+            changed |= apply_rules(d, current_interpretation, successor_dict, subsumer)
 
     # Check if D was assigned to d
     if subsumer in current_interpretation["d0"]:
-        return "YES"
+        return True
     else:
-        return "NO"
+        return False
     
-def apply_rules(d, current_interpretation, successor_dict, subsumer, subsumer_found):
+def apply_rules(d, current_interpretation, successor_dict, subsumer):
     changed = False
 
     # ⊤-rule: Add ⊤ to any individual.
@@ -119,7 +120,6 @@ def apply_rules(d, current_interpretation, successor_dict, subsumer, subsumer_fo
     copy = current_interpretation[d].copy()
     for concept in copy:
         for axiom in tbox:
-            #print(axiom)
             if axiom.getClass().getSimpleName() == "GeneralConceptInclusion":
                 left = axiom.lhs()
                 right = axiom.rhs()
@@ -127,19 +127,29 @@ def apply_rules(d, current_interpretation, successor_dict, subsumer, subsumer_fo
                     current_interpretation[d].add(right)
                     changed = True
 
-
-    print('____', len(current_interpretation))
-    # for key in current_interpretation.keys():
-    #     for concept in current_interpretation[key]:
-    #         print(formatter.format(concept))
-
     for concept in current_interpretation["d0"]:
         if formatter.format(concept) == formatter.format(subsumer):
             changed = False
             break
     return changed
 
- 
+
+def get_all_subsumers(subsumee):
+    subsumers = {subsumee} # subsumers of the input
+
+    ### we dont need this func because it is not recursive anymore
+    def find_subsumers(concept): 
+        nonlocal subsumers
+
+        if check_subsumption(concept, subsumee): # continue if it is a subsumer of the input
+            subsumers.add(concept)
+
+    for concept in conceptNames: # touch all concepts
+        if concept not in subsumers: # check if note added to the set
+            find_subsumers(concept)
+
+    return subsumers
+
 
  
 input_subsumer = "VeganFood"
@@ -148,8 +158,12 @@ input_subsumee = "Salad"
 subsumer_concept = elFactory.getConceptName(input_subsumer)
 subsumee_concept = elFactory.getConceptName(input_subsumee)
 
-result = check_subsumption(subsumer_concept, subsumee_concept)
-print(f"Result: {result}") # YES or NO
+for c in get_all_subsumers(subsumee_concept):
+    print(c)
+
+
+
+# result = check_subsumption(subsumer_concept, subsumee_concept)
 
 
 

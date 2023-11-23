@@ -3,7 +3,7 @@ from pathlib import Path
 from dataclasses import dataclass
 
 
-from .ege_reasoner import ELReasoner
+from .reasoner import ELReasoner
 
 from typing import List
 

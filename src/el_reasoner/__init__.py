@@ -1,3 +1,3 @@
-from .ege_reasoner import ELReasoner
+from .reasoner import ELReasoner
 
 __all__ = ("ELReasoner",)

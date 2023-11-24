@@ -38,7 +38,9 @@ def parse_arguments(args: List[str]) -> Args:
 
 
 def run(args: Args) -> None:
-    for item in ELReasoner(str(args.input_file)).get_all_subsumers(args.class_name):
+    for item in ELReasoner(
+        str(args.input_file), ["1", "2", "3", "4", "5"]
+    ).get_all_subsumers(args.class_name):
         print(item)
 
 

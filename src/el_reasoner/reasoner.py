@@ -6,8 +6,8 @@ from py4j.java_gateway import JavaGateway
 
 class ELReasoner:
     def __init__(self, filepath: str, order: List[str]) -> None:
-        assert all(rule in order for rule in ["1", "2", "3", "4", "5"])
-        assert len(order) == 5
+        assert all(rule in order for rule in ["0", "1", "2", "3", "4", "5"])
+        assert len(order) == 6
         self.order = order
         ### INITIALIZATION ###
 

@@ -23,5 +23,5 @@ python -m el_reasoner [ontology_file] [class_name]
 Or, run the experiment with:
 
 ```shell
-python experiment.py ontology/burgers.rdf "Salad" "1,2,3,4,5"
+python experiment.py ontology/burgers.rdf "Salad" "0,1,2,3,4,5"
 ```

@@ -1,6 +1,7 @@
 from pathlib import Path
 from dataclasses import dataclass
 import argparse
+import itertools
 import time
 
 from typing import List
@@ -52,13 +53,24 @@ class Timer:
         print(self.name, time.perf_counter_ns() - self.start_time)
 
 
+# def main():
+#     args = parse_arguments()
+#     for order in itertools.permutations(args.order[1:]):
+#         with Timer("normal"):
+#             for item in ELReasoner(
+#                 str(args.input_file), ["0", "1"] + list(order)
+#             ).get_all_subsumers(args.class_name):
+#                 print(item)
+
+
 def main():
     args = parse_arguments()
-    with Timer("normal"):
-        for item in ELReasoner(str(args.input_file), args.order).get_all_subsumers(
-            args.class_name
-        ):
-            print(item)
+    for order in [args.order, reversed(args.order)]:
+        with Timer("normal"):
+            for item in ELReasoner(str(args.input_file), list(order)).get_all_subsumers(
+                args.class_name
+            ):
+                print(item)
 
 
 if __name__ == "__main__":

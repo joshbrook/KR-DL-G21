@@ -1,3 +1,3 @@
-from .managed_dependencies import JARPATH
+from .reasoner import ELReasoner
 
-__all__ = ("JARPATH",)
+__all__ = ("ELReasoner",)
